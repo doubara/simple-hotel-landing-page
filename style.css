@@ -1,7 +1,8 @@
 *, 
 *::before, 
 *::after{
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
 :root{
@@ -11,18 +12,19 @@ body{
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.2rem;
+    line-height: 1.5;
 }
 li{
     list-style: none;
 }
-p{
-    line-height: 1.75;
-}
+
 h1{
     font-size: 2.5rem;
 }
 button{
     font: inherit;
+    background: none;
+    border: none;
 }
 img, picture, source{
     max-width: 100%;
@@ -32,11 +34,18 @@ img, picture, source{
 .flex{
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 .wrapper{
     max-width: 1200px;
     margin-inline: auto;
     padding-inline: 2rem;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
 }
 .btn-component{
     background: none;
@@ -52,15 +61,56 @@ header{
 header h2{
     align-self: center;
 }
-header ul{
-    gap: 1rem;
-}
+
 header li{
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
 }
 header li:hover{
     color: var(--orange);
     background-color: rgba(238, 238, 238, 0.1);
+}
+.header-flex > *{
+    display: inline-block;
+    width: 49%;
+}
+
+.header-layout > *{
+    margin: 0px;
+    width:49.5%;
+    display: inline-block;
+}
+.nav-flex > *{
+    display: inline-block;
+    width: 23.5%;
+}
+
+@media (max-width: 800px){
+    .header-layout > *{
+        width: 100%;
+        padding-block: .5rem;
+    }
+    .header-nav{
+        display: none;
+        /* display: none; */
+    }
+    .show-dropdown{
+        display: block;
+    }
+    .nav-flex > *{
+        width: 100%;
+    }
+}
+.menu-toggle{
+    align-self: center;
+    width: 30px;
+    display: none;
+}
+@media (max-width: 800px){
+    .menu-toggle{
+        display: block;
+        margin-left: auto;
+    }
 }
 .active{
     color: var(--orange);
@@ -69,11 +119,12 @@ header li:hover{
 .hero{
     display: flex;
     flex-direction: column;
-    min-height: 80vh;
+    min-height: 100vh;
     align-items: center;
     justify-content: center;
     gap: 2.5rem;
     text-align: center;
+    padding: 2rem 0px;
 }
 .hero h1{
     color: var(--orange);
@@ -96,7 +147,6 @@ header li:hover{
     background-repeat: no-repeat;
 }
 .card{
-    height: 70vh;
     background-color: #333;
     color: white;
 }
@@ -113,6 +163,11 @@ header li:hover{
     height: 100%;
     text-align: center;
 }
+@media (max-width: 800px){
+    .card-wrapper{
+        width: 100%;
+    }
+}
 .card-content{
     margin: 3rem 2rem;
 }
@@ -124,13 +179,23 @@ header li:hover{
 }
 /* boxes */
 .boxes{
-    height: 40vh;
+    height: 45vh;
     color: black;
 }
 .box{
     float: left;
     width: 25%;
     height: 100%;
+}
+@media (max-width: 1000px){
+    .box{
+        width: 50%;
+    }
+}
+@media (max-width: 600px){
+    .box{
+        width: 100%;
+    }
 }
 .box-content{
     padding: 2rem 2rem 0rem 2rem;
@@ -152,6 +217,10 @@ header li:hover{
 }
 footer{
     text-align: center;
-    padding-block: 1.8rem;
+    padding-block: 2rem;
     background-color: #333;
+}
+footer p{
+    display: inline-block;
+    vertical-align: middle;
 }

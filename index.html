@@ -6,21 +6,28 @@
     <meta name="viewport" content="width=
     , initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <style defer src="main.js"></style>
+    <script defer src="main.js"></script>
     <title>Document</title>
 </head>
 <body>
     <header class="">
         <div class="wrapper">
-            <div class="flex">
-                <h2>CoderLodge</h2>
-                <ul class="flex">
-                    <li class="active">Home</li>
-                    <li>Home</li>
-                    <li>Home</li>
-                    <li>Home</li>
-                    <li>Home</li>
-                </ul>
+            <div class="header-layout">
+                <div class="header-flex">
+                    <h2>CoderLodge</h2>
+                    <div>
+                        <button data-toggle="menu-toggle" class="menu-toggle"><img src="./images/bars.svg">
+                        </button>
+                    </div>
+                </div>
+                <nav data-toggle="dropdown-nav" class="header-nav">
+                    <ul class="nav-flex">
+                        <li class="active">Home</li>
+                        <li>Home</li>
+                        <li>Home</li>
+                        <li>Home</li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>
@@ -34,7 +41,7 @@
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card clearfix">
             <div class="card-img">
             </div>
             <div class="card-wrapper">
@@ -47,7 +54,7 @@
                 </div>
             </div>
         </div>
-        <div class="boxes">
+        <div class="boxes clearfix">
             <div class="box">
                 <div class="box-content">
                         <div class="box-icon">
