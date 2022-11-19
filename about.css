@@ -1,0 +1,82 @@
+main{
+    color: #333;
+}
+.about-info-container{
+    padding-block: 2rem;
+}
+.about-info h1{
+    text-align: center;
+}
+.about-info p{
+    margin-top: 1.2rem;
+}
+.about-info-container > *{
+    display: inline-block;
+    width: 49%;
+}
+.about-info__img-container{
+    width: 70%;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-inline: auto;
+}
+.about-info__img-container img{
+    vertical-align: middle;
+}
+@media only screen and (max-width: 800px) {
+    .about-info-container > *{
+        width: 100%;
+    }
+    .about-info__img-container{
+        margin-block: 1rem;
+        width: 80%;
+        margin-inline: auto;
+    }
+}
+.hotel-img{
+    min-height: 100vh;
+    background-image: url(./images/hotel_logo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    border: 1px solid transparent;
+
+}
+.hotel-img{
+    text-align: center;
+}
+.testimonials{
+    padding-top: 3rem;
+}
+.testimonial-header{
+    padding-top: 2rem;
+}
+.testimonial-card{
+    margin-block: 1rem;
+    padding: 1.5rem 2rem;
+    background-color: #f7c18a94;
+    border-radius: 8px;
+}
+@media only screen and (max-width: 800px) {
+    .about-info-container > *{
+        width: 100%;
+    }
+    .about-info__img-container{
+        margin-block: 1rem;
+        width: 80%;
+    }
+}
+.testimonial-card > *{
+    display: inline-block;
+}
+.testimonial-img-container{
+    width: 10%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.testimonial-card img{
+    vertical-align: middle;
+}
+.testimonial-card p{
+    width: 89%;
+}

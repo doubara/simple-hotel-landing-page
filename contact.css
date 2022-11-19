@@ -1,0 +1,44 @@
+.mx-w800{
+    max-width: 500px;
+    margin-inline: auto;
+    padding-inline: 2rem;
+}
+.contact-wrapper{
+    padding-block: 2rem;
+    color: #333;
+    
+}
+.contact-wrapper > h1{
+    text-align: center;
+}
+.contact-wrapper > p, .contact-wrapper > h1{
+    margin-top: 1rem;
+    text-align: center;
+}
+.contact-form{
+    margin-top: 2rem;
+}
+.contact-form label{
+    display: block;
+}
+
+.contact-form input{
+    width: 100%;
+    height: 40px;
+}
+.contact-form__button{
+    text-align: center;
+    padding: 1rem 6rem;
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+    display: block;
+    margin-inline: auto;
+    margin-top: 1rem;
+}
+.input-wrapper:not(:first-of-type){
+    margin-top: 1.5rem;
+}
+.input-wrapper input, .input-wrapper textarea{
+    border: 1px solid rgba(51, 51, 51, 0.342);
+}
